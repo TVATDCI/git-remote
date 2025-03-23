@@ -146,78 +146,78 @@ git push origin main
 
 If you cloned a repository from your second GitHub account but want to push it to your first GitHub account, you need to change the remote URL from the second account to the first account. Here’s how you do it:
 
-1️⃣ Verify the Current Remote URL
+### 1️⃣ Verify the Current Remote URL
+
 Run this in the cloned repo:
 
-sh
-Copy
-Edit
+```sh
 git remote -v
+```
+
 ✅ Output should look like:
 
-sh
-Copy
-Edit
-origin git@github.com-second:TVATDCI/git-remote.git (fetch)
-origin git@github.com-second:TVATDCI/git-remote.git (push)
+```sh
+origin git@github.com-second:SecondAccountUserName/git-remote.git (fetch)
+origin git@github.com-second:SecondAccountUserName/git-remote.git (push)
+```
+
 This confirms that the remote is linked to your second GitHub account.
 
-2️⃣ Remove the Current Remote
+### 2️⃣ Remove the Current Remote
+
 Since you want to push this repo to your first account, you need to remove the existing remote:
 
-sh
-Copy
-Edit
+```sh
 git remote remove origin
-3️⃣ Create a New Repository in Your First Account
-Go to GitHub → Your First Account.
+```
 
-Click New Repository.
+### 3️⃣ Create a New Repository in Your First Account
 
-Give it a name (e.g., git-remote-first).
+- Go to GitHub → Your First Account.
+- Click **New Repository**.
+- Give it a name (e.g., `git-remote-first`).
+- **Do NOT** initialize with README, .gitignore, or a license (since you already have a repo locally).
+- Copy the SSH URL (it should look like this):
 
-Do NOT initialize with README, .gitignore, or a license (since you already have a repo locally).
+```sh
+git@github.com-first:FirstAccountUsername/git-remote-first.git
+```
 
-Copy the SSH URL (it should look like this):
+### 4️⃣ Add the New Remote for Your First Account
 
-scss
-Copy
-Edit
-git@github.com-first:TNTHNGVDYNND/git-remote-first.git
-4️⃣ Add the New Remote for Your First Account
 Now, link your local repo to your first GitHub account:
 
-sh
-Copy
-Edit
-git remote add origin git@github.com-first:TNTHNGVDYNND/git-remote-first.git
+```sh
+git remote add origin git@github.com-first:FirstAccountUsername/git-remote-first.git
+```
+
 Verify it:
 
-sh
-Copy
-Edit
+```sh
 git remote -v
+```
+
 ✅ Expected output:
 
-sh
-Copy
-Edit
-origin git@github.com-first:TNTHNGVDYNND/git-remote-first.git (fetch)
-origin git@github.com-first:TNTHNGVDYNND/git-remote-first.git (push)
-5️⃣ Push the Repository to the First Account
-sh
-Copy
-Edit
+```sh
+origin git@github.com-first:FirstAccountUsername/git-remote-first.git (fetch)
+origin git@github.com-first:FirstAccountUsername/git-remote-first.git (push)
+```
+
+### 5️⃣ Push the Repository to the First Account
+
+```sh
 git push -u origin main
+```
+
 ✅ If successful, your repository is now in your first GitHub account!
 
-🎯 Summary
-Clone the repo from the second account ✅
+---
 
-Remove the existing remote (git remote remove origin) ✅
+## 🎯 Summary
 
-Create a new repo on the first account ✅
-
-Add the new remote from the first account ✅
-
-Push your local repo to the first account ✅
+✔️ Clone the repo from the second account
+✔️ Remove the existing remote (`git remote remove origin`)
+✔️ Create a new repo on the first account
+✔️ Add the new remote from the first account
+✔️ Push your local repo to the first account
