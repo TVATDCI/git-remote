@@ -2,7 +2,7 @@
 
 # # Setting Up Multiple GitHub Accounts on One Laptop
 
-This guide explains how to set up and use multiple GitHub accounts on a single machine using SSH and local Git configurations.
+This repository provides a step-by-step guide on how to set up and manage multiple GitHub accounts on a single laptop using SSH authentication. It is designed to help developers, students, and professionals who need to work with multiple GitHub accounts seamlessly.
 
 ## 1️⃣ **Adding a Second GitHub Account to This Laptop**
 
