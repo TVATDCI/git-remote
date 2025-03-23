@@ -141,5 +141,3 @@ git push origin main
 - To switch accounts, just navigate between different repositories configured for each account.
 
 ---
-
-🎉 **You're now set up to use multiple GitHub accounts on one laptop!** 🚀
